@@ -1,0 +1,67 @@
+<!doctype html>
+<!-- HDA rank-row : definition unique, 20 instances. Aucune valeur en dur ici. -->
+<html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family:'Display'; src:url('{{fontDisplay}}'); }
+  @font-face { font-family:'Strong';  src:url('{{fontStrong}}');  }
+
+  html, body { margin:0; padding:0; background:transparent; }
+
+  .row {
+    width:{{rowW}}px; height:{{barH}}px;
+    display:flex; align-items:center; gap:{{rankGap}}px;
+  }
+
+  .rank {
+    width:{{rankW}}px; flex:0 0 {{rankW}}px;
+    font-family:'Display'; font-size:{{rankSize}}px; line-height:1;
+    color:{{rankInk}}; text-align:left; letter-spacing:-0.02em;
+  }
+
+  .bar {
+    width:{{barW}}px; flex:0 0 {{barW}}px; height:{{barH}}px;
+    border-radius:{{barRadius}}px;
+    background:linear-gradient({{gradAngle}}deg, {{barFrom}}, {{barTo}});
+    display:flex; align-items:center;
+    padding-left:{{barPadL}}px; box-sizing:border-box;
+    overflow:hidden;
+  }
+
+  .chip {
+    width:{{flagW}}px; height:{{flagH}}px; flex:0 0 {{flagW}}px;
+    border-radius:{{chipRadius}}px; background:{{chipBg}};
+    box-shadow:inset 0 0 0 1px {{chipEdge}};
+    padding:{{flagInset}}px; box-sizing:border-box;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .flag {
+    font-family:'{{fontEmoji}}';
+    font-size:{{flagGlyphSize}}px; line-height:1;
+    transform:scale({{flagGlyphScale}});
+  }
+
+  .name {
+    margin-left:{{flagGap}}px; flex:1 1 auto;
+    font-family:'Strong'; font-size:{{nameSize}}px; line-height:1;
+    color:{{nameInk}}; letter-spacing:-0.005em; white-space:nowrap;
+  }
+
+  .score {
+    width:{{scoreW}}px; flex:0 0 {{scoreW}}px; height:{{barH}}px;
+    background:linear-gradient({{gradAngle}}deg, {{scoreFrom}}, {{scoreTo}});
+    display:flex; align-items:center;
+    padding-left:{{scorePadL}}px; box-sizing:border-box;
+    font-family:'Strong'; font-size:{{scoreSize}}px; line-height:1;
+    color:{{scoreInk}};
+  }
+</style></head>
+<body>
+  <div class="row">
+    <div class="rank">{{rank}}</div>
+    <div class="bar">
+      <div class="chip"><span class="flag">{{flagGlyph}}</span></div>
+      <div class="name">{{country}}</div>
+      <div class="score">{{score}}</div>
+    </div>
+  </div>
+</body></html>
