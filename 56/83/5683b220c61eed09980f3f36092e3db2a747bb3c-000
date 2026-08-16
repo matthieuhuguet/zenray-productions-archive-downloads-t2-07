@@ -1,0 +1,42 @@
+# Naming Conventions = PascalCase Everywhere
+
+Created: May 17, 2025 1:19 PM
+
+Globalement
+
+<PREFIX+TYPE>_<PascalCaseDescription>_v#.<ext>
+
+**ICO_UI_ScreenshotVideoGames_v01.ico**
+
+**BP_PlayerCharacter_v01** 
+
+3D = snake_case
+
+Function = PascalCase
+
+[Utiliser PascalCase Partout = windows + unreal](Naming%20Conventions%20=%20PascalCase%20Everywhere/Utiliser%20PascalCase%20Partout%20=%20windows%20+%20unreal%201f8d4ee179c3802d8d96fa7015eb1f96.md)
+
+[Naming Conventions](Naming%20Conventions%20=%20PascalCase%20Everywhere/Naming%20Conventions%201f6d4ee179c380c998bad649bb479a49.csv)
+
+- **`BaseAtk`**
+    
+    > valeur fixe, issue du template (DataAsset)
+    > 
+- **`CurrentAtk`**
+    
+    > valeur dynamique, modifiable en-jeu (niveau, buffs, équipement)
+    > 
+
+Dans Unreal documentation Enum = E_ et ça correspond à mon style minimaliste.
+
+Rules Unreal = 
+
+Pour les variables
+
+> PascalCase, sans underscores, et seul le booléen prend un préfixe b minuscule.
+> 
+- **PascalCase** : chaque mot commence par une majuscule, sans tirets ni soulignés [Epic Games Developer](https://dev.epicgames.com/documentation/en-us/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine?utm_source=chatgpt.com)
+- **Zéro underscore** : évite `_` qui génèrent des espaces automatiques dans les Blueprints et nuisent à la recherche [Epic Developer Community Forums](https://forums.unrealengine.com/t/underscore-adds-whitespace-to-name/349126?utm_source=chatgpt.com)
+- **Booléens** : préfixe `b` minuscule ; ex. `bIsInTallGrass`, pas `b_IsInTallGrass` ni `IsInTallGrass` [Autodesk](https://static.au-uw2-prd.autodesk.com/Optional_Additional_Class_Materials_AS256565_Realtime_CAD_Visualization_with_Unreal_Studio_Craig_Barr.pdf?utm_source=chatgpt.com)
+
+[Each Project Naming Convention = PRO-YYYYMMDD-X](Naming%20Conventions%20=%20PascalCase%20Everywhere/Each%20Project%20Naming%20Convention%20=%20PRO-YYYYMMDD-X%201cbd4ee179c3814d93edea9dec681040.md)
