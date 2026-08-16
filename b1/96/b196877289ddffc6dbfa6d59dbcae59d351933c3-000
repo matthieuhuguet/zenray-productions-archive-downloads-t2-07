@@ -1,0 +1,9 @@
+# Ne touches plus à l’optimisation du pc matthieu, je te conseille de rester comme ça : Ton intuition est bonne, et je te conseille de rester comme ça. À 2933 plutôt que 3200, tu perds environ 9 % de débit mémoire “théorique”, mais en pratique sur un 5950X + 3090 l’impact est quasi invisible : 0–3 % dans des cas très CPU-limités, et 0 % sur la plupart des usages. Le boost auto du CPU fait déjà le boulot, et la stabilité vaut largement ces micro-gains.
+
+Date de création: September 26, 2025 3:28 PM
+
+À 2933 plutôt que 3200, tu perds environ 9 % de débit mémoire “théorique”, mais en pratique sur un 5950X + 3090 l’impact est quasi invisible : 0–3 % dans des cas très CPU-limités, et 0 % sur la plupart des usages. Le boost auto du CPU fait déjà le boulot, et la stabilité vaut largement ces micro-gains.
+
+Ton intuition est bonne, et je te conseille de rester comme ça.
+
+À 2933 plutôt que 3200, tu perds environ 9 % de débit mémoire “théorique”, mais en pratique sur un 5950X + 3090 l’impact est quasi invisible : 0–3 % dans des cas très CPU-limités, et 0 % sur la plupart des usages. Le boost auto du CPU fait déjà le boulot, et la stabilité vaut largement ces micro-gains.
