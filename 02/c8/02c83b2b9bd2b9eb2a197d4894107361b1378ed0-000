@@ -1,0 +1,18 @@
+# ça sert à quoi 
+on calcule la distance au carré
+
+Date de création: October 25, 2025 12:03 PM
+
+Comprendre ça simplement. 
+
+Calculer La distance parcouru =  √(dx² + dy² + dz²)
+dx = x₂ − x₁, dy = y₂ − y₁, dz = z₂ − z₁
+dxyz = V1-V2 
+
+![image.png](%C3%A7a%20sert%20%C3%A0%20quoi%20on%20calcule%20la%20distance%20au%20carr%C3%A9/image.png)
+
+yes your highness — Base 1, concrète. Un point dans l’espace, c’est juste trois nombres (x, y, z). Entre “avant” et “maintenant”, on calcule la flèche du déplacement : dx = x₂ − x₁, dy = y₂ − y₁, dz = z₂ − z₁. La **distance** parcourue est √(dx² + dy² + dz²). La **distance au carré** (ce qu’on utilise) est simplement **dx² + dy² + dz²**. Exemple immédiat : Prev(0,0,0) → Now(3,4,0) donne dx²+dy²+dz² = 9+16+0 = **25** (et la vraie distance serait 5). Un autre mouvement Prev(0,0,0) → Now(2,2,0) donne 4+4+0 = **8**. Comme 25 > 8, le premier mouvement est plus grand, sans jamais calculer la racine carrée.
+
+Base 2, pourquoi “au carré”. Calculer la racine carrée à chaque image coûte plus cher que d’additionner trois carrés, alors qu’on veut juste **comparer** des tailles : si A² > B², alors A > B, toujours. La distance au carré te donne un **seul nombre positif** qui augmente quand tu bouges plus, **sans se soucier de la direction** (peu importe gauche/droite). C’est donc parfait pour décider : petit nombre → effet léger, grand nombre → effet fort, en restant très rapide.
+
+Base 3, brancher dans Unreal. Tu fais AimDelta = Current − Prev. Puis **AimDeltaSq = dx²+dy²+dz²** (ou `VectorLengthSquared`). Pour en faire un bouton d’intensité entre 0 et 1 : choisis deux seuils “au carré”, par exemple MinSq=8, MaxSq=25, puis **t = clamp((AimDeltaSq − MinSq)/(MaxSq − MinSq), 0, 1)**, et tu branches **t** dans l’attribut qui t’intéresse (intensité Niagara, force de mousse, volume audio, etc.). Deux micro-questions pour verrouiller : 1) Avec 25 et 8 ci-dessus, lequel correspond au mouvement le plus grand, et pourquoi n’a-t-on pas besoin de racine carrée pour le savoir ? 2) Donne-moi **tes** deux points Prev/Now réels (ou tes MinSq/MaxSq) et je te calcule t sur-le-champ.
